@@ -1,0 +1,143 @@
+/* 
+Theme changes:
+-.grid-container adjusted to move page elements. For better spacing on the menu, I added blank spaces in the template areas.
+-.a: got a new font color.
+-.image1-4: moved down and made changes to borders. 4th image requires a margin as it has a caption connected and doesn't align without the help of a margin. 
+-.body: new background and font.
+-.menu: moved grid area, row to column, change of font color and styles, padding and margins adjusted or removed.
+-.main: updated all grid and border settings.
+-aside.left: displayed none
+-aside.right: grid area and flex row updated. Flex wrap implemented to align images.
+-.article: grid area and font updated.
+-.aside: font color change and size updated.
+-.footer: grid area and font color updated. 
+-#toggle: adjusted colors to have more of a "button" appearance.
+-added a replica of the @media for shorter screens to assure that elements cascaded correctly.
+*/
+
+@media screen and (min-width:701px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(11,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "main main main main main main . ."
+        "main main main main main main menu menu"
+        "main main main main main main . ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "asideRight asideRight asideRight asideRight asideLeft asideLeft asideLeft ."
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+        
+        
+    }
+    a {
+        text-decoration: none;
+        color:rgba(228, 201, 195, 0.884);
+    }
+    .image1{
+        width: 60%;
+        border-color: rgba(51, 84, 230, 0.192);  
+        
+    }
+    .image2 {
+        width: 70%;
+        border-color: rgba(51, 84, 230, 0.192);
+        
+    }
+    .image3 {
+        width: 60%;
+        border-color: rgba(51, 84, 230, 0.192);
+    }
+    .image4 {
+        width: 50%;
+        border-radius: 20px;
+        border-color: rgba(51, 84, 230, 0.192);
+        margin-left:-10px;
+        
+    }
+    body {
+        background-image: linear-gradient(rgba(132, 235, 175, 0.438), rgba(209, 240, 250, 0.801), rgb(170, 242, 252));
+        font-family:Serif, Garamond, Verdana;
+    }
+    .menu {
+        width: 40%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        text-align: center;
+        background-color: rgba(130, 129, 143, 0.199);
+        border-style:double;
+        border-color: rgba(230, 217, 201, 0.384);
+        border-radius: 60px;
+        border-width: 25px;  
+    }
+    #toggle {
+        background-color: rgba(177, 177, 177, 0.74);
+        border-radius: 5px;
+        color: currentColor;
+        padding: 12px 16px;
+        font-size: 20px;
+        cursor: pointer;
+        border-width: 10px;
+        border-color: currentColor;
+    }
+    .main {
+        border-image: linear-gradient(180deg, rgba(228, 209, 125, 0.596), rgba(193, 199, 202, 0.486), rgba(193, 199, 202, 0)) 1; 
+    }
+    aside.left {
+        flex-flow:row;
+        color:rgba(44, 110, 99, 0.781);
+        font-size: 40px;
+    }
+    aside.right {
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    #theFig {
+        margin-left: 0px;
+    }
+    .article {
+        color:rgb(95, 11, 192);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    h2 {
+        color:rgba(26, 65, 58, 0.781);
+        font-size: 50px;
+        text-decoration:underline;
+    }
+    .instaicon {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    .footer {
+        color:rgb(88, 23, 23);
+    }
+}
+@media screen and (orientation:portrait) and (min-width:700px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(15,1fr);
+        grid-template-areas:
+        "header header header header header header header header"
+        "menu menu menu menu menu menu menu menu"
+        "menu menu menu menu menu menu menu menu"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "main main main main main main main main"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft asideLeft"
+        "asideRight asideRight asideRight asideRight maiasideRightn asideRight asideRight asideRight"
+        "asideRight asideRight asideRight asideRight asideRight asideRight asideRight asideRight"
+        "footer footer footer footer footer footer footer footer"
+        "footer footer footer footer footer footer footer footer"
+    }
+}
